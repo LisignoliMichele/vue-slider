@@ -24,8 +24,13 @@
                <div class="arrow_right">
                   <i @click="nextImage" class="fas fa-chevron-right"></i>
                </div>
+               <div class="bullets">
+                  <i v-for="(pic, index) in images" :class="imageIndex == index ? 'active' : '' " @click="imageIndex = index" class="fas fa-circle"></i>
+               </div>
+            </div>
          </div>
       </div>
+   
       <script src="js/script.js"></script>
    </body>
 </html>
