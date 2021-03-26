@@ -11,16 +11,20 @@ var app = new Vue(
             "https://i.ytimg.com/vi/ysTSmeb7VRM/maxresdefault.jpg"
          ],
          imageIndex: 0,
+         slide: 'slideright',
+
       },
       methods:{
          nextImage: function(){
             this.imageIndex++;
+            this.slide = "slideright";
             if (this.imageIndex == this.images.length) {
                this.imageIndex = 0
             }
          },
          prevImage: function(){
             this.imageIndex--;
+            this.slide = "slideleft";
             if (this.imageIndex < 0) {
                this.imageIndex = this.images.length - 1
             }
