@@ -41,6 +41,3 @@ var app = new Vue(
       }
    }
 );
-// : salvare la classe in una variabile (una per quella di destra e una per quella di sinistra però) e valorizzarla quando clicchi
-// 17:04
-// e poi con un setTimeout, la rimetti a null/vuoto/quello che vuoi
