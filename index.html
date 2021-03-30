@@ -19,7 +19,7 @@
                   <i @click="prevImage"  class="fas fa-chevron-left"></i>
                </div>
                <div class="image">
-                  <img :class="slide"  v-bind:src="images[imageIndex]" alt="ValChiavenna">
+                  <img :class="slideLeft, slideRight"  v-bind:src="images[imageIndex]" alt="ValChiavenna">
                </div>
                <div class="arrow_right">
                   <i @click="nextImage" class="fas fa-chevron-right"></i>

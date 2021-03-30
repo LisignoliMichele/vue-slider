@@ -11,24 +11,36 @@ var app = new Vue(
             "https://i.ytimg.com/vi/ysTSmeb7VRM/maxresdefault.jpg"
          ],
          imageIndex: 0,
-         slide: 'slideright',
-
+         slideRight: "",
+         slideLeft: "",
       },
       methods:{
+         deleteClassSlideRight: function(){
+            this.slideRight = "";
+         },
+         deleteClassSlideLeft: function(){
+            this.slideLeft = "";
+         },
          nextImage: function(){
             this.imageIndex++;
-            this.slide = "slideright";
+            this.slideLeft = "slideright";
+            setTimeout(this.deleteClassSlideLeft,1000)
             if (this.imageIndex == this.images.length) {
-               this.imageIndex = 0
+               this.imageIndex = 0;
             }
+
          },
          prevImage: function(){
             this.imageIndex--;
-            this.slide = "slideleft";
+            this.slideLeft = "slideleft";
+            setTimeout(this.deleteClassSlideLeft,1000)
             if (this.imageIndex < 0) {
-               this.imageIndex = this.images.length - 1
+               this.imageIndex = this.images.length - 1;
             }
          }
       }
    }
 );
+// : salvare la classe in una variabile (una per quella di destra e una per quella di sinistra però) e valorizzarla quando clicchi
+// 17:04
+// e poi con un setTimeout, la rimetti a null/vuoto/quello che vuoi
